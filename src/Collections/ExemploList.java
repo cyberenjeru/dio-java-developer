@@ -36,6 +36,20 @@ public class ExemploList {
             soma += next;
         }
         System.out.println(soma);
+        System.out.println("Exiba a média das notas: " + (soma/notas.size()));
+        System.out.println("Remova as notas menores que 7 e exiba a lista: ");
+        Iterator<Double> iterator1 = notas.iterator();
+        while(iterator1.hasNext()){
+            Double next = iterator1.next();
+            if(next < 7) iterator1.remove();
+        }
+        System.out.println(notas);
+
+        System.out.println("Apague toda a lista.");
+        notas.clear();
+        System.out.println(notas);
+
+        System.out.println("A lista está vazia? " + notas.isEmpty());
 
     }
 }
