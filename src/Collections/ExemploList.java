@@ -26,6 +26,7 @@ public class ExemploList {
         System.out.println(notas);
         System.out.println("Confira se a nota 5 está na lista: " + notas.contains(5.0));
         System.out.println("Exiba a menor nota: " + Collections.min(notas));
+        System.out.println("Exiba a maior nota: " + Collections.max(notas));
 
     }
 }
