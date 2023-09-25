@@ -16,6 +16,13 @@ public class ExemploList {
         notas.add(8.0);
         notas.add(7.5);
         System.out.println(notas);
+        System.out.println("Exiba a posição da nota 8: " + notas.indexOf(8.0));
+        System.out.println("Adicione na lista a nota 8 na posição 4: ");
+        notas.add(4,8.0);
+        System.out.println(notas.toString());
+        System.out.println("Substitua a nota 8.5 por 9: ");
+        notas.set(1,9.0);
+        System.out.println(notas);
 
     }
 }
