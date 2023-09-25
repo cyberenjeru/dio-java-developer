@@ -2,6 +2,7 @@ package Collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class ExemploList {
@@ -27,6 +28,14 @@ public class ExemploList {
         System.out.println("Confira se a nota 5 está na lista: " + notas.contains(5.0));
         System.out.println("Exiba a menor nota: " + Collections.min(notas));
         System.out.println("Exiba a maior nota: " + Collections.max(notas));
+        System.out.println("Exiba a soma dos valores: ");
+        Iterator<Double> iterator = notas.iterator();
+        Double soma = 0.0;
+        while(iterator.hasNext()){
+            Double next = iterator.next();
+            soma += next;
+        }
+        System.out.println(soma);
 
     }
 }
