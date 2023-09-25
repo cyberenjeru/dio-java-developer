@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ExemploList {
@@ -24,6 +25,7 @@ public class ExemploList {
         notas.set(1,9.0);
         System.out.println(notas);
         System.out.println("Confira se a nota 5 está na lista: " + notas.contains(5.0));
+        System.out.println("Exiba a menor nota: " + Collections.min(notas));
 
     }
 }
