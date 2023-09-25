@@ -23,6 +23,7 @@ public class ExemploList {
         System.out.println("Substitua a nota 8.5 por 9: ");
         notas.set(1,9.0);
         System.out.println(notas);
+        System.out.println("Confira se a nota 5 está na lista: " + notas.contains(5.0));
 
     }
 }
