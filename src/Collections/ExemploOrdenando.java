@@ -18,6 +18,9 @@ public class ExemploOrdenando {
         System.out.println("Ordem natural");
         Collections.sort(meusGatos);
         System.out.println(meusGatos);
+        System.out.println("Ordem Idade");
+        meusGatos.sort(new ComparatorIdade());
+        System.out.println(meusGatos);
 
 
 
@@ -27,7 +30,7 @@ public class ExemploOrdenando {
  class Gato implements Comparable<Gato> {
     private String nome;
     private String cor;
-    private int idade;
+    private Integer idade;
 
      public Gato(String nome, String cor, int idade) {
          this.nome = nome;
@@ -71,5 +74,22 @@ public class ExemploOrdenando {
      @Override
      public int compareTo(Gato gato) {
          return this.getNome().compareToIgnoreCase(gato.getNome());
+     }
+ }
+
+ class ComparatorIdade implements Comparator<Gato>{
+
+
+     @Override
+     public int compare(Gato o1, Gato o2) {
+         return Integer.compare(o1.getIdade(),o2.getIdade());
+     }
+ }
+
+ class ComparatorCor implements Comparator<Gato>{
+
+     @Override
+     public int compare(Gato o1, Gato o2) {
+         return 0;
      }
  }
