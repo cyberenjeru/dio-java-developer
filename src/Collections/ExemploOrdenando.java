@@ -21,6 +21,12 @@ public class ExemploOrdenando {
         System.out.println("Ordem Idade");
         meusGatos.sort(new ComparatorIdade());
         System.out.println(meusGatos);
+        System.out.println("Comparando Cor");
+        meusGatos.sort(new ComparatorCor());
+        System.out.println(meusGatos);
+        System.out.println("Ordenar por Nome, Cor e Idade");
+        meusGatos.sort(new ComparatorNomeCorIdade());
+        System.out.println(meusGatos);
 
 
 
@@ -90,6 +96,22 @@ public class ExemploOrdenando {
 
      @Override
      public int compare(Gato o1, Gato o2) {
-         return 0;
+         return o1.getNome().compareToIgnoreCase(o2.getCor());
+     }
+ }
+
+ class ComparatorNomeCorIdade implements Comparator<Gato>{
+
+     @Override
+     public int compare(Gato o1, Gato o2) {
+         int nome = o1.getNome().compareToIgnoreCase(o2.getNome());
+         if(nome != 0){
+             return nome;
+         }
+         int cor = o1.getCor().compareToIgnoreCase(o2.getCor());
+         if(cor !=0) {
+             return cor;
+         }
+         return Integer.compare(o1.getIdade(),o2.getIdade());
      }
  }
