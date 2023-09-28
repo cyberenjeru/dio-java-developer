@@ -21,6 +21,28 @@ public class ExemploSet {
         System.out.println("Exiba a média das notas: " + (soma/notas.size()));
         notas.remove(0d);
         System.out.println(notas);
+        System.out.println("Remova as notas menores que 7:");
+        Iterator<Double> iterator1 = notas.iterator();
+        while(iterator1.hasNext()){
+            Double next = iterator1.next();
+            if(next < 7) {
+                iterator1.remove();
+            }
+        }
+        System.out.println(notas);
+        System.out.println("Exiba todas as notas na ordem em que foram informados: ");
+        Set<Double> notas2 = new LinkedHashSet<>();
+        notas2.add(7d);
+        notas2.add(8.5);
+        notas2.add(9.3);
+        notas2.add(5d);
+        notas2.add(7d);
+        notas2.add(0d);
+        notas2.add(3.6);
+        System.out.println(notas2);
+        Set<Double> notas3 = new TreeSet<>(notas2);
+        System.out.println(notas3);
+
 
     }
 }
