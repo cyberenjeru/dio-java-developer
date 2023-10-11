@@ -15,5 +15,8 @@ public class ExerciciosStreamAPI {
 
         System.out.println("Pege os 5 primeiros números e coloque dentro de um Set:");
         numerosAleatorios.stream().limit(5).collect(Collectors.toSet()).forEach(System.out::println);
+
+        System.out.println("Transforme esta lista de String em uma lista de números inteiros");
+        List<Integer> numerosAleatorios1 = numerosAleatorios.stream().map(Integer::parseInt).toList();
     }
 }
