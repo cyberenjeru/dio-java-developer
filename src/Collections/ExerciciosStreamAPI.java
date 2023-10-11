@@ -18,5 +18,8 @@ public class ExerciciosStreamAPI {
 
         System.out.println("Transforme esta lista de String em uma lista de números inteiros");
         List<Integer> numerosAleatorios1 = numerosAleatorios.stream().map(Integer::parseInt).toList();
+
+        System.out.println("Pegue os números pares e maiores que 2 e coleque em uma lista");
+        numerosAleatorios.stream().map(Integer::parseInt).filter(i -> i % 2 == 0 && i > 2).collect(Collectors.toList()).forEach(System.out::println);
     }
 }
